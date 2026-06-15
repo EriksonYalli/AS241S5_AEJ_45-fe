@@ -1,0 +1,26 @@
+spring:
+  r2dbc:
+    url: r2dbc:h2:mem:///testdb;MODE=PostgreSQL
+    username: sa
+    password: 
+    pool:
+      initial-size: 5
+      max-size: 10
+
+  sql:
+    init:
+      mode: never
+
+ai-api:
+  textgears:
+    url: ${TEXTGEARS_URL:https://textgears-textgears-v1.p.rapidapi.com/correct}
+    host: ${TEXTGEARS_HOST:textgears-textgears-v1.p.rapidapi.com}
+    key: ${TEXTGEARS_KEY:test-key}
+
+  copilot:
+    url: ${COPILOT_URL:https://copilot5.p.rapidapi.com/copilot}
+    host: ${COPILOT_HOST:copilot5.p.rapidapi.com}
+    key: ${COPILOT_KEY:test-key}
+
+server:
+  port: ${SERVER_PORT:8081}

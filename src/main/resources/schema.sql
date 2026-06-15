@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS api_logs (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    api_name VARCHAR(50) NOT NULL,
+    request_text TEXT NOT NULL,
+    response_json TEXT,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    status CHAR(1) NOT NULL DEFAULT 'A'
+);
